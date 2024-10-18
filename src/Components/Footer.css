@@ -1,0 +1,81 @@
+.footer {
+  font-size: 21px;
+  font-family: "Revalia", cursive;
+  background: linear-gradient(90deg, #c1dff9, #246db6); /* Градієнтний фон */
+  padding: 10px; /* Відступи для простору */
+  color: #31383f; /* Колір тексту */
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Тінь */
+}
+
+.footer h5,
+.footer p {
+  transition: text-shadow 0.3s ease; /* Плавний перехід для тіні тексту */
+}
+
+.footer h5:hover,
+.footer p:hover {
+  text-shadow: 10px 10px 10px rgba(14, 25, 179, 0.7); /* Тінь при наведенні */
+}
+
+.footer p,
+.footer li {
+  margin: 0 0 2px; /* Зменшені відступи між параграфами і списками */
+}
+
+.footer a {
+  text-decoration: none;
+  color: #000000; /* Чорний колір посилань */
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #38002f; /* Колір посилань при наведенні */
+}
+
+.footer .social-icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.footer .social-icons a {
+  color: #f8f9fa; /* Білий колір іконок */
+  margin: 0 10px; /* Відступи між іконками */
+  font-size: 30px; /* Розмір іконок */
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease; /* Плавний перехід кольору та трансформації */
+  text-shadow: 0px 0px 5px rgba(14, 25, 179, 0.5); /* Легка тінь для іконок */
+}
+
+.footer .social-icons a:hover {
+  color: #61dafb; /* Колір іконок при наведенні */
+  text-shadow: 0px 0px 10px rgba(14, 25, 179, 0.7); /* Підсвітка при наведенні */
+  transform: scale(1.1); /* Збільшення іконок при наведенні */
+}
+
+.footer .contact-info p {
+  font-size: 14px;
+  color: #e9ecef; /* Світлий колір для контактної інформації */
+}
+
+.footer .logo img {
+  width: 100px;
+}
+
+.footer .bottom-text {
+  font-size: 12px;
+  color: #e9ecef; /* Світлий текст для нижнього тексту */
+}
+
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+  }
+  .footer .social-icons {
+    justify-content: center;
+  }
+  .footer ul {
+    text-align: center;
+  }
+}

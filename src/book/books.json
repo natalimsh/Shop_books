@@ -1,0 +1,131 @@
+[
+  {
+    "id": 1,
+    "title": "Ромео і Джульєтта",
+    "author": "Вільям Шекспір",
+    "price": 180.95,
+    "genre": " Проза для підлітків",
+    "image": "/img/22.jpg",
+    "description": "Ця оповідь – про споконвічне та незрівнянне почуття, без якого життя немислиме, – про кохання. Тож Ромео і Джульєтта сьогодні постають перед вами такими бажаними, неповторними в своїй любові, юними і подібними в чомусь до вас самих..."
+  }
+  ,
+  {
+    "id": 2,
+    "title": "1984",
+    "author": "Джордж Орвелл",
+    "price": 198.25 ,
+    "genre": "Проза",
+    "image": "/img/23.jpg",
+  
+    "description": "Один з найголовніших і вже точно найважливіший роман минулого сторіччя. Важко пригадати інший літературний твір, який би без зайвої манірності настільки ж чітко, правдиво і жорстоко поставив перед загалом важливу проблематику. А саме: що таке влада? Яка її природа? Куди прямує сучасне суспільство? Що таке справжня смерть, і яка саме смерть є справжньою — фізична смерть індивіда, чи смерть його внутрішнього єства, при збереженні фізичного тіла? Що таке свобода, і як вона співвідноситься з владою? Чи можливий прояв свободи в умовах абсолютної тоталітарної влади?"
+  },
+  {
+    "id": 3,
+    "title": "Безсердечна",
+    "author": "Марісса Маєр",
+    "price": 590,
+    "genre": "Фантастика",
+    "image": "/img/24.jpg",
+    "description": "A novel about the serious issues of rape and racial inequality, narrated by a young girl."
+  },
+  {
+    "id": 4,
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "price": 9.99,
+    "genre": "Fiction",
+    "image": "/img/25.jpg",
+    "description": "A story about teenage angst and alienation, told through the eyes of Holden Caulfield."
+  },
+  {
+    "id": 5,
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "price": 11.99,
+    "genre": "Dystopian",
+    "image": "/img/26.jpg",
+    "description": "A novel that anticipates developments in reproductive technology and sleep-learning."
+  },
+  {
+    "id": 6,
+    "title": "Moby Dick",
+    "author": "Herman Melville",
+    "price": 14.99,
+    "genre": "Classic",
+    "image": "/img/27.jpg",
+    "description": "The narrative of Captain Ahab's obsessive quest to kill the giant white whale Moby Dick."
+  },
+  {
+    "id": 7,
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "price": 7.99,
+    "genre": "Romance",
+    "image": "/img/28.jpg",
+    "description": "A romantic novel that also critiques the British landed gentry at the end of the 18th century."
+  },
+  {
+    "id": 8,
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "price": 10.99,
+    "genre": "Fantasy",
+    "image": "/img/29.jpg",
+    "description": "A fantasy novel about the adventures of Bilbo Baggins, a hobbit who embarks on a quest."
+  },
+  {
+    "id": 9,
+    "title": "Fahrenheit 451",
+    "author": "Ray Bradbury",
+    "price": 8.99,
+    "genre": "Dystopian",
+    "image": "/img/30.jpg",
+    "description": "A dystopian novel that presents a future American society where books are outlawed."
+  },
+  {
+    "id": 10,
+    "title": "The Lord of the Rings",
+    "author": "J.R.R. Tolkien",
+    "price": 19.99,
+    "genre": "Fantasy",
+    "image": "/img/31.jpg",
+    "description": "An epic fantasy novel that follows the quest to destroy the One Ring."
+  },
+  {
+    "id": 11,
+    "title": "The Ballad of Songbirds and Snakes",
+    "author": "Suzanne Collins",
+    "price": 17.99,
+    "genre": "Dystopian",
+    "image": "/img/32.jpg", 
+    "description": "In this prequel to The Hunger Games trilogy, Coriolanus Snow struggles to avoid poverty while mentoring a tribute in the Hunger Games."
+  },
+  {
+    "id": 12,
+    "title": "The Midnight Library",
+    "author": "Matt Haig",
+    "price": 15.99,
+    "genre": "Fiction",
+    "image": "/img/33.jpg", 
+    "description": "A novel about the choices that go into a life well lived and the infinite possibilities of the universe."
+  },
+  {
+    "id": 13,
+    "title": "The Paris Apartment",
+    "author": "Lucy Foley",
+    "price": 14.99,
+    "genre": "Mystery",
+    "image": "/img/34.jpg",
+    "description": "A gripping mystery set in a Paris apartment building, where secrets abound and no one is who they seem."
+  },
+
+  {
+    "id": 14,
+    "title": "The Apricot Boy: A Novella",
+    "author": "Ali Hazelwood",
+    "price": 15.00,
+    "genre": "Romance",
+    "image": "/img/35.jpg",
+    "description": "A quirky romantic comedy about a graduate student who pretends to be in a relationship with a professor, leading to unexpected emotions and realizations."
+  }
+]

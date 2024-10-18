@@ -1,0 +1,89 @@
+/* Modal overlay */
+.modal.show {
+  display: block; /* Ensure modal is displayed */
+  position: fixed; /* Fixed position for modal */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 1000; /* Above other content */
+}
+
+/* Modal dialog */
+.modal-dialog {
+  position: relative;
+  margin: 1.75rem auto; /* Center the modal */
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #99c8d4; /* Light background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+/* Modal header */
+.modal-header {
+  display: flex;
+  justify-content: space-between; /* Space between title and close button */
+  align-items: center; /* Center vertically */
+  padding: 20px; /* Padding for header */
+}
+
+/* Modal body */
+.modal-body {
+  display: flex; /* Use Flexbox to align image and text horizontally */
+  align-items: center; /* Vertically center-align the image and text */
+  justify-content: space-between; /* Add space between image and text */
+  padding: 20px;
+}
+/* Modal image */
+.modal-image {
+  position: relative;
+  margin-left: 1px;
+
+  max-width: 40%; /* Responsive image */
+
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Modal description */
+.modal-description {
+  font-size: 18px; /* Increase font size for better readability */
+  margin-top: 1px; /* Space above the description */
+  color: rgb(10, 7, 29); /* Black text */
+  margin-left: 10%;
+
+
+}
+
+/* Modal footer */
+.modal-footer {
+  display: flex; /* Flex layout for buttons */
+  justify-content: flex-end; /* Align buttons to the right */
+  padding: 10px; /* Padding for footer */
+}
+
+/* Button styles */
+.btn {
+  padding: 5px 25px; /* Button padding */
+  border-radius: 4px; /* Rounded corners for buttons */
+  
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.btn-secondary {
+  background-color: #6c757d; /* Bootstrap secondary button color */
+  color: rgb(0, 0, 0); /* White text */
+}
+
+.btn-primary {
+  background-color: #007bff9d; /* Bootstrap primary button color */
+  color: rgb(0, 0, 0); /* White text */
+}
+
+/* Hover effect for buttons */
+.btn:hover {
+  opacity: 0.8; /* Slightly fade on hover */
+}

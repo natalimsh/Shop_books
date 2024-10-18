@@ -1,0 +1,31 @@
+.carousel-video {
+  width: 100vw; /* Зменшено до 70% ширини вікна */
+  height: 75vh; /* Зменшено до 40% висоти вікна */
+  object-fit: cover; /* Зберігає пропорції */
+}
+
+.quote-container {
+  padding: 20px; /* Відступи для зручності */
+  padding-inline: 100px; /* Відступи по кожній стороні */
+  background-color: rgba(
+    99,
+    107,
+    116,
+    0.8
+  ); /* Напівпрозорий фон для контрасту */
+  text-align: center; /* Вирівнювання тексту по центру */
+  color: #ffffff; /*  колір тексту */
+}
+
+.carousel-caption h3 {
+  font-family: "Revalia", cursive;
+  color: #ffffff; /* Білий колір для заголовку */
+  font-size: 1.5rem; /* Можна відрегулювати розмір шрифту */
+  text-shadow: 2px 2px 4px rgba(3, 3, 3, 0.918); /* Тінь для покращення читабельності */
+}
+
+.carousel-caption p {
+  color: #ffffff; /* Світло-сірий колір для автора */
+  font-size: 1.2rem; /* Розмір шрифту для абзацу */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тінь для покращення читабельності */
+}

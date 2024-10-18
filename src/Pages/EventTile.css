@@ -1,0 +1,74 @@
+/* C:\Users\admin\444\src\Pages\EventTile.css */
+
+.event-tile {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Increased shadow for more prominence */
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  margin: 20px; /* Increased margin for better spacing between tiles */
+  width: 90%; 
+   
+margin-bottom: 60px; /* Make sure there's enough space at the bottom for the button */
+
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease; /* Add transition for background color */
+}
+
+.event-tile:hover {
+  transform: scale(1.02);
+  background-color: #e0f7fa; /* Light blue background on hover */
+  box-shadow: 0 12px 30px rgba(0, 89, 255, 0.5); /* Darker shadow on hover */
+}
+
+.event-image {
+  width: 15%; /* Adjusted width for better balance */
+  object-fit: cover;
+}
+
+.event-details {
+  width: 70%; /* Adjusted width for better balance */
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Revalia", cursive; /* Apply custom font to event details */
+}
+
+.event-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.event-date-time, .event-location {
+  font-size: 2rem;
+  color: #666;
+}
+
+.event-description {
+  font-size: 25px;
+  margin-top: 10px;
+  color: #555;
+}
+
+.event-speaker {
+  font-weight: bold;
+  margin-top: 10px;
+  color: #007bff;
+}
+
+/* Apply the custom font globally to the page */
+body {
+  font-family: "Revalia", cursive; /* Set the font for the entire body */
+}
+.scroll-to-top-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px; /* Adjust the size as needed */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 1000; /* Ensure it appears above other elements */
+}

@@ -1,0 +1,68 @@
+.header {
+  font-family: "Revalia", cursive;
+
+  background: linear-gradient(90deg, #246db6, #c1dff9); /* Градієнт для шапки */
+  padding: 5px 0; /* Збільшені відступи для кращого вигляду */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тінь для шапки */
+}
+
+.header img {
+  margin-right: 10px;
+}
+
+.header .navbar-brand {
+  font-size: 26px; /* Трохи більший шрифт для назви бренду */
+  font-weight: bold;
+  color: #1d2020; /*  колір для бренду */
+}
+
+.header .navbar-nav .nav-link {
+  color: #3b2d2d;
+  font-size: 18px; /* Збільшений шрифт для зручності */
+  transition: color 0.3s ease-in-out; /* Плавна зміна кольору */
+}
+
+.header .navbar-nav .nav-link:hover {
+  color: #61dafb;
+  text-shadow: 0px 0px 10px rgba(14, 25, 179, 0.7); /* Ефект підсвічування при наведенні */
+}
+
+.header .form-control {
+  width: 300px; /* Задаємо конкретну ширину */
+  border-radius: 30px;
+  padding: 8px 20px;
+}
+
+.header .form-control:focus {
+  border-color: #192d45; /* Зміна кольору бордюру при фокусі */
+  box-shadow: 0 0 10px rgba(97, 218, 251, 0.5); /* Тінь при фокусі */
+}
+
+.header .btn-outline-info {
+  border-radius: 10px;
+  padding: 8px 20px;
+  background-color: transparent;
+  border-color: #192d45;
+  color: #1d2020;
+  transition: all 0.3s ease-in-out;
+}
+
+.header .btn-outline-info:hover {
+  background-color: #1d2020;
+  color: #ffffff;
+}
+
+.header .navbar-toggler {
+  background-color: #61dafb; /* Виділення кнопки-меню на мобільних */
+}
+
+.header .navbar-toggler-icon {
+  color: #ffffff;
+}
+
+@media (max-width: 576px) {
+  .header .navbar {
+    flex-direction: column;
+    align-items: center; /* Вирівнювання елементів по центру */
+  }
+}

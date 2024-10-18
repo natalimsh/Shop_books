@@ -1,0 +1,68 @@
+[
+    {
+      "id": 1,
+      "title": "Author Meet & Greet: Maria Kovacs",
+      "date": "2024-04-15",
+      "time": "18:00 - 20:00",
+      "location": "Main Hall",
+      "image": "https://images.unsplash.com/photo-1517971071642-34a2d3ecc9cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "description": "Join us for an evening with bestselling author Maria Kovacs as she discusses her latest novel 'Echoes of Eternity'. Get your books signed and participate in an engaging Q&A session.",
+      "speaker": "Maria Kovacs"
+    },
+    {
+      "id": 2,
+      "title": "Children's Story Time",
+      "date": "2024-04-20",
+      "time": "10:00 - 11:00",
+      "location": "Kids' Corner",
+      "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "description": "Bring your little ones for an enchanting hour of storytelling. Our skilled narrator will bring favorite tales to life, sparking imagination and fostering a love for reading."
+    },
+    {
+      "id": 3,
+      "title": "Book Club: 'The Silent Echo'",
+      "date": "2024-04-25",
+      "time": "19:00 - 21:00",
+      "location": "Reading Room",
+      "image": "https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "description": "Dive deep into this month's selection, 'The Silent Echo' by J.K. Rowling. Engage in thought-provoking discussions and share your insights with fellow book lovers."
+    },
+    {
+        "id": 5,
+        "title": "Graphic Novel Workshop",
+        "date": "2024-05-10",
+        "time": "14:00 - 16:00",
+        "location": "Art Room",
+        "image": "https://www.cartoonstudies.org/wp-content/uploads/2014/04/9314067529_f4c608596d_o.jpg",
+        "description": "Join us for a creative workshop where you can learn how to create your own graphic novel. Materials will be provided."
+      },
+      {
+        "id": 6,
+        "title": "Fantasy Book Fair",
+        "date": "2024-06-01",
+        "time": "09:00 - 18:00",
+        "location": "Community Center",
+        "image": "https://images.pexels.com/photos/3987020/pexels-photo-3987020.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        "description": "Celebrate the world of fantasy literature with authors, artists, and publishers. Participate in panels, signings, and workshops."
+      }
+      ,
+      {
+        "id": 7,
+        "title": "Mystery Evening: Clue Hunt",
+        "date": "2024-06-15",
+        "time": "18:30 - 20:30",
+        "location": "Library Garden",
+        "image": "https://images.pexels.com/photos/28969936/pexels-photo-28969936.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        "description": "Join us for an interactive mystery clue hunt around the library garden. Gather your friends and solve the clues together!"
+      },
+      {
+        "id": 8,
+        "title": "Self-Publishing 101",
+        "date": "2024-06-20",
+        "time": "16:00 - 18:00",
+        "location": "Conference Room",
+        "image": "https://images.pexels.com/photos/20360855/pexels-photo-20360855.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        "description": "Learn the ins and outs of self-publishing from industry experts. Ideal for aspiring authors looking to publish their own books."
+      }
+]
+      

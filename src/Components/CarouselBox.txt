@@ -1,0 +1,58 @@
+import React, { Component } from "react";
+import { Carousel } from "react-bootstrap";
+import img1 from "../assets/11.jpg";
+import img2 from "../assets/12.jpg";
+import img3 from "../assets/13.jpg";
+import img4 from "../assets/14.jpg";
+import img5 from "../assets/15.jpg";
+import "./CarouselBox.css"; // Імпорт CSS файлу
+
+const quotes = [
+  {
+    text: "Вчитися читати книгу, думати над прочитаним - велика і благородна мета.",
+    author: "Й. Гете",
+    image: img1,
+  },
+  {
+    text: "Тільки книжки перетворять подив у допитливість. Тільки читання відкриває перед людиною розкіш інтелектуального життя.",
+    author: "В. О. Сухомлинський",
+    image: img2,
+  },
+  {
+    text: "Література — це храм, куди можна ввійти лиш з чистою совістю і благородними намірами.",
+    author: "Ф. Шиллер",
+    image: img3,
+  },
+  {
+    text: "Одні книги вчать нас жити, інші - прикрашають наш побут.",
+    author: "М. Генін",
+    image: img4,
+  },
+  {
+    text: "Коли книга подобається з роками все більше - це вірна ознака, що вона хороша.",
+    author: "Г. Ліхтенберг",
+    image: img5,
+  },
+];
+
+export default class CarouselBox extends Component {
+  render() {
+    return (
+      <Carousel>
+        {quotes.map((quote, index) => (
+          <Carousel.Item key={index}>
+            <img
+              className="d-block w-100 carousel-image" // Додано клас
+              src={quote.image}
+              alt={`Slide ${index + 1}`}
+            />
+            <Carousel.Caption>
+              <h3>{quote.text}</h3>
+              <p>— {quote.author}</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+        ))}
+      </Carousel>
+    );
+  }
+}
