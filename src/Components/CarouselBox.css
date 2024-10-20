@@ -21,7 +21,7 @@
   font-family: "Revalia", cursive;
   color: #ffffff; /* Білий колір для заголовку */
   font-size: 1.5rem; /* Можна відрегулювати розмір шрифту */
-  text-shadow: 2px 2px 4px rgba(3, 3, 3, 0.918); /* Тінь для покращення читабельності */
+  text-shadow: 2px 2px 4px rgb(0, 4, 65); /* Тінь для покращення читабельності */
 }
 
 .carousel-caption p {

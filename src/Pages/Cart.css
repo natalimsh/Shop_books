@@ -1,21 +1,22 @@
 .cart-container {
   font-family: "Revalia", cursive;
   padding: 20px;
-  background-color: #f0f8ff; /* Light blue background */
+  background-color: rgba(240, 248, 255, 0.8);
+  background-image: url('./foncart.jpg');
+  background-size: cover;
+  background-position: center;
   border-radius: 15px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  animation: fadeIn 0.6s ease-out; /* Animation for item appearance */
+  animation: fadeIn 0.6s ease-out;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.cart-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .cart-items {
@@ -28,26 +29,34 @@
   background-color: #ffffff;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+ 
 }
 
 .cart-table th,
 .cart-table td {
   border: 1px solid #ddd;
   padding: 14px;
-  text-align: left;
-  font-family: 'Comic Sans MS', cursive, sans-serif; /* Playful font */
+  text-align: center;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
 .cart-table th {
-  background-color: #add8e6; /* Blue for headers */
+  background-color: #add8e6;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1.2px;
 }
 
+.cart-table td {
+  text-align: left;
+}
+
+.cart-table td.price {
+  text-align: center;
+}
+
 .cart-table td:hover {
-  background-color: #e0ffff; /* Light cyan on hover */
+  background-color: #e0ffff;
 }
 
 .cart-item-image {
@@ -70,28 +79,12 @@
   border-radius: 10px;
   transition: border-color 0.3s ease;
   font-size: 16px;
-  background-color: #e0ffff; /* Light cyan background */
+  background-color: #e0ffff;
 }
 
 .quantity-input:focus {
-  border-color: #0019fa; /* Bright blue on focus */
+  border-color: #0019fa;
   outline: none;
-}
-
-.quantity-button {
-  background-color: #2100df; /* Bright blue */
-  color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 10px 12px;
-  cursor: pointer;
-  margin: 0 5px;
-  font-size: 18px;
-  transition: background-color 0.3s;
-}
-
-.quantity-button:hover {
-  background-color: #2f00ff; /* Darker blue on hover */
 }
 
 .remove-button {
@@ -114,7 +107,93 @@
 .cart-summary {
   margin-top: 20px;
   font-weight: bold;
-  font-size: 20px; /* Slightly increase text size */
+  font-size: 20px;
   text-align: right;
-  color: #1D1340; 
+  color: #1D1340;
+}
+
+.tree {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: grow 5s ease-in-out infinite;
+}
+
+@keyframes grow {
+  0% {
+    transform: translateX(-50%) scale(0);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.5);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+.empty-cart {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.empty-cart-video {
+  width: 100%;
+  max-width: 600px; /* Set a maximum width for the video */
+  border-radius: 10px; /* Add rounded corners to the video */
+  animation: fadeIn 1s ease-in; /* Animation for video appearance */
+  box-shadow: none; /* Remove the shadow to eliminate the outline */
+  position: relative; /* Allow for positioning pseudo-elements */
+  z-index: 1; /* Ensure video is above the background */
+}
+
+.empty-cart:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px; /* Match the video border radius */
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 70%); /* Create a soft gradient */
+  filter: blur(10px); /* Apply blur effect */
+  z-index: 0; /* Position behind the video */
+}
+
+.empty-cart-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  animation: slideIn 0.6s ease-out; /* Animation for message appearance */
+  z-index: 2; /* Ensure the message is above the video and blurred effect */
+}
+
+/* Keyframes for the fade-in effect */
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Start fully transparent */
+  }
+  100% {
+    opacity: 1; /* End fully opaque */
+  }
+}
+
+/* Keyframes for the slide-in effect */
+@keyframes slideIn {
+  0% {
+    transform: translate(-50%, -60%); /* Start slightly higher */
+    opacity: 0; /* Start fully transparent */
+  }
+  100% {
+    transform: translate(-50%, -50%); /* Center position */
+    opacity: 1; /* End fully opaque */
+  }
 }

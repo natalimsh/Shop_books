@@ -10,11 +10,14 @@
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.3.3",
     "express": "^4.21.1",
+    "framer-motion": "^11.11.9",
     "html-entities": "^2.5.2",
-    "html-webpack-plugin": "^5.6.0",
+    "html-webpack-plugin": "^5.6.2",
     "icons": "^1.0.0",
     "jquery": "^3.7.1",
+    "lodash": "^4.17.21",
     "mongoose": "^8.7.1",
+    "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.5",
     "react-dom": "^18.3.1",
@@ -35,8 +38,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "prepare": "husky"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -57,8 +59,16 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-transform-private-methods": "^7.25.7",
+    "@eslint/js": "^9.12.0",
+    "autoprefixer": "^10.4.20",
     "eslint": "^8.57.1",
+    "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-react": "^7.37.1",
+    "globals": "^15.11.0",
+    "husky": "^9.1.6",
+    "netlify-cli": "^17.37.1",
+    "postcss": "^8.4.47",
     "prettier": "3.3.3",
     "tailwindcss": "^3.4.14",
     "webpack-dev-server": "^5.1.0"

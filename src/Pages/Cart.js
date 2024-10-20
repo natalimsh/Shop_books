@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { removeFromCart, updateQuantityInCart } from "../redux/actions"; // Убедитесь, что путь правильный
+import { removeFromCart, updateQuantityInCart } from "../redux/actions";
 import "./Cart.css";
 
 const Cart = () => {
@@ -16,7 +16,7 @@ const Cart = () => {
   const calculateTotalPrice = () => {
     const total = cartItems.reduce(
       (total, item) => total + (item.price || 0) * (item.quantity || 0),
-      0,
+      0
     );
     return total.toFixed(2);
   };
@@ -30,11 +30,20 @@ const Cart = () => {
 
   return (
     <div className="cart-container">
-      <h2>«Кошик»</h2>
+      <h2 className="cart-title">«Кошик»</h2>
       <div className="cart-items">
         <h3>Які книги Ви обрали: ({cartItems.length})</h3>
         {cartItems.length === 0 ? (
-          <p>Кошик порожній</p>
+          <div className="empty-cart">
+            <video
+              src="/img/videocart.mp4" // Ensure this path is correct
+              autoPlay
+              loop
+              muted
+              className="empty-cart-video"
+            />
+            <p className="empty-cart-message">Кошик порожній</p>
+          </div>
         ) : (
           <table className="cart-table">
             <thead>
@@ -59,8 +68,8 @@ const Cart = () => {
                     />
                   </td>
                   <td>{item.title}</td>
-                  <td>
-                    <p> {item.price} грн</p>
+                  <td className="price">
+                    <p>{item.price} грн</p>
                   </td>
                   <td>
                     <input
@@ -79,14 +88,14 @@ const Cart = () => {
                     />
                   </td>
                   <td>
-  <button onClick={() => handleRemove(item.id)} className="remove-button">
-    <img 
-      src="https://img.icons8.com/?size=100&id=1942&format=png&color=000000" 
-      alt="Видалити" 
-      className="remove-icon" 
-    />
-  </button>
-</td>
+                    <button onClick={() => handleRemove(item.id)} className="remove-button">
+                      <img
+                        src="https://img.icons8.com/?size=100&id=1942&format=png&color=000000"
+                        alt="Видалити"
+                        className="remove-icon"
+                      />
+                    </button>
+                  </td>
                 </tr>
               ))}
             </tbody>

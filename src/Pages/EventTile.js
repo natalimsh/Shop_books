@@ -1,6 +1,7 @@
 // C:\Users\admin\444\src\Pages\EventTile.js
 
 import React from 'react';
+import PropTypes from 'prop-types'; // Import PropTypes
 import './EventTile.css'; // Make sure this path is correct
 
 const EventTile = ({ event }) => {
@@ -16,6 +17,19 @@ const EventTile = ({ event }) => {
       </div>
     </div>
   );
+};
+
+// Define prop types for the event prop
+EventTile.propTypes = {
+  event: PropTypes.shape({
+    image: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+    time: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    speaker: PropTypes.string, // This can be optional
+  }).isRequired,
 };
 
 export default EventTile;

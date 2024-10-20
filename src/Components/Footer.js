@@ -15,24 +15,24 @@ const Footer = () => {
           <h5>Контакти</h5>
           <p>Телефон: +38 (044) 123-45-67</p>
           <p>Email: info@knigoteka.com</p>
-          <p>Графік роботи: Пн-Нд </p>
-          <p> 9:00 - 21:00</p>
+          <p>Графік роботи: Пн-Нд</p>
+          <p>9:00 - 21:00</p>
         </Col>
         <Col md={4} className="text-center">
           <h5>Соціальні мережі</h5>
           <ul className="nav justify-content-center list-unstyled d-flex">
             <li className="ms-3">
-              <a href="https://twitter.com" className="text-muted">
+              <a href="https://twitter.com" className="social-icon">
                 <FaTwitter size={35} /> {/* Іконка Twitter */}
               </a>
             </li>
             <li className="ms-3">
-              <a href="https://instagram.com" cassName="text-muted">
+              <a href="https://instagram.com" className="social-icon">
                 <FaInstagram size={35} /> {/* Іконка Instagram */}
               </a>
             </li>
             <li className="ms-3">
-              <a href="https://facebook.com" className="text-muted">
+              <a href="https://facebook.com" className="social-icon">
                 <FaFacebook size={35} /> {/* Іконка Facebook */}
               </a>
             </li>

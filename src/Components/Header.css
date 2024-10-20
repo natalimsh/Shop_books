@@ -1,6 +1,6 @@
+/* Header Styles */
 .header {
   font-family: "Revalia", cursive;
-
   background: linear-gradient(90deg, #246db6, #c1dff9); /* Градієнт для шапки */
   padding: 5px 0; /* Збільшені відступи для кращого вигляду */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тінь для шапки */
@@ -13,7 +13,7 @@
 .header .navbar-brand {
   font-size: 26px; /* Трохи більший шрифт для назви бренду */
   font-weight: bold;
-  color: #1d2020; /*  колір для бренду */
+  color: #1d2020; /* колір для бренду */
 }
 
 .header .navbar-nav .nav-link {
@@ -31,12 +31,15 @@
   width: 300px; /* Задаємо конкретну ширину */
   border-radius: 30px;
   padding: 8px 20px;
+  transition: none; /* Remove transition effect */
 }
 
 .header .form-control:focus {
   border-color: #192d45; /* Зміна кольору бордюру при фокусі */
-  box-shadow: 0 0 10px rgba(97, 218, 251, 0.5); /* Тінь при фокусі */
+  box-shadow: none; /* Remove shadow on focus */
 }
+
+
 
 .header .btn-outline-info {
   border-radius: 10px;
@@ -66,3 +69,52 @@
     align-items: center; /* Вирівнювання елементів по центру */
   }
 }
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative; /* Position relative for the dropdown */
+  display: inline-block; /* Inline-block to align with other nav items */
+}
+
+/* Dropdown Toggle */
+.dropdown-toggle {
+  cursor: pointer; /* Indicate clickable item */
+  transition: color 0.3s ease; /* Transition for hover effect */
+}
+
+.dropdown-toggle:hover {
+  color: #61dafb; /* Change color on hover */
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  display: none; /* Hide dropdown by default */
+  position: absolute; /* Ensure the dropdown is positioned correctly */
+  z-index: 1000; /* Ensure it appears above other elements */
+  opacity: 0; /* Start with opacity 0 for animation */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Transition for opacity and transform */
+  transform: translateY(-10px); /* Move dropdown slightly up for effect */
+  background-color: #ffffff; /* Set background color for dropdown */
+  border-radius: 5px; /* Rounded corners for dropdown */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for dropdown */
+}
+
+/* Show Dropdown */
+.dropdown.show .dropdown-menu {
+  display: block; /* Show dropdown when it is in show state */
+  opacity: 1; /* Fade in */
+  transform: translateY(0); /* Move to original position */
+}
+
+.dropdown-item {
+  color: #3b2d2d; /* Колір тексту */
+  padding: 10px 15px; /* Відступи */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Плавний перехід */
+  cursor: pointer; /* Показує, що елемент клікабельний */
+}
+
+.dropdown-item:hover {
+  background-color: #61dafb; /* Підсвічування фону */
+  color: #ffffff; /* Колір тексту при наведенні */
+}
+

@@ -3,129 +3,126 @@
     "id": 1,
     "title": "Ромео і Джульєтта",
     "author": "Вільям Шекспір",
-    "price": 180.95,
-    "genre": " Проза для підлітків",
+    "price": 150.00,
+    "genre": "Проза для підлітків",
     "image": "/img/22.jpg",
     "description": "Ця оповідь – про споконвічне та незрівнянне почуття, без якого життя немислиме, – про кохання. Тож Ромео і Джульєтта сьогодні постають перед вами такими бажаними, неповторними в своїй любові, юними і подібними в чомусь до вас самих..."
-  }
-  ,
+  },
   {
     "id": 2,
     "title": "1984",
     "author": "Джордж Орвелл",
-    "price": 198.25 ,
+    "price": 180.00,
     "genre": "Проза",
     "image": "/img/23.jpg",
-  
     "description": "Один з найголовніших і вже точно найважливіший роман минулого сторіччя. Важко пригадати інший літературний твір, який би без зайвої манірності настільки ж чітко, правдиво і жорстоко поставив перед загалом важливу проблематику. А саме: що таке влада? Яка її природа? Куди прямує сучасне суспільство? Що таке справжня смерть, і яка саме смерть є справжньою — фізична смерть індивіда, чи смерть його внутрішнього єства, при збереженні фізичного тіла? Що таке свобода, і як вона співвідноситься з владою? Чи можливий прояв свободи в умовах абсолютної тоталітарної влади?"
   },
   {
     "id": 3,
     "title": "Безсердечна",
     "author": "Марісса Маєр",
-    "price": 590,
+    "price": 500.00,
     "genre": "Фантастика",
     "image": "/img/24.jpg",
-    "description": "A novel about the serious issues of rape and racial inequality, narrated by a young girl."
+    "description": "Роман про серйозні проблеми зґвалтування та расової нерівності, розказаний від імені молодої дівчини."
   },
   {
     "id": 4,
-    "title": "The Catcher in the Rye",
-    "author": "J.D. Salinger",
-    "price": 9.99,
-    "genre": "Fiction",
+    "title": "Ловець у житі",
+    "author": "Дж. Д. Селінджер",
+    "price": 300.00,
+    "genre": "Художня література",
     "image": "/img/25.jpg",
-    "description": "A story about teenage angst and alienation, told through the eyes of Holden Caulfield."
+    "description": "Історія про підліткову тривогу та відчуження, розказана через призму Голдена Каулфілда."
   },
   {
     "id": 5,
-    "title": "Brave New World",
-    "author": "Aldous Huxley",
-    "price": 11.99,
-    "genre": "Dystopian",
+    "title": "Прекрасний новий світ",
+    "author": "Олдос Хакслі",
+    "price": 200.00,
+    "genre": "Аутопія",
     "image": "/img/26.jpg",
-    "description": "A novel that anticipates developments in reproductive technology and sleep-learning."
+    "description": "Роман, який передбачає розвиток репродуктивних технологій та навчання під сном."
   },
   {
     "id": 6,
-    "title": "Moby Dick",
-    "author": "Herman Melville",
-    "price": 14.99,
-    "genre": "Classic",
+    "title": "Мобі Дік",
+    "author": "Герман Мелвілл",
+    "price": 250.00,
+    "genre": "Класика",
     "image": "/img/27.jpg",
-    "description": "The narrative of Captain Ahab's obsessive quest to kill the giant white whale Moby Dick."
+    "description": "Нарис про одержимий пошук капітана Ахаба, який прагне вбити гігантського білого кита Мобі Діка."
   },
   {
     "id": 7,
-    "title": "Pride and Prejudice",
-    "author": "Jane Austen",
-    "price": 7.99,
-    "genre": "Romance",
+    "title": "Гордість і упередження",
+    "author": "Джейн Остін",
+    "price": 150.00,
+    "genre": "Роман",
     "image": "/img/28.jpg",
-    "description": "A romantic novel that also critiques the British landed gentry at the end of the 18th century."
+    "description": "Романтичний роман, який також критикує британське землевласницьке суспільство наприкінці XVIII століття."
   },
   {
     "id": 8,
-    "title": "The Hobbit",
-    "author": "J.R.R. Tolkien",
-    "price": 10.99,
-    "genre": "Fantasy",
+    "title": "Хоббіт",
+    "author": "Дж. Р. Р. Толкін",
+    "price": 170.00,
+    "genre": "Фантастика",
     "image": "/img/29.jpg",
-    "description": "A fantasy novel about the adventures of Bilbo Baggins, a hobbit who embarks on a quest."
+    "description": "Фантастичний роман про пригоди Більбо Беггінса, хоббіта, який вирушає в подорож."
   },
   {
     "id": 9,
-    "title": "Fahrenheit 451",
-    "author": "Ray Bradbury",
-    "price": 8.99,
-    "genre": "Dystopian",
+    "title": "451 градус за Фаренгейтом",
+    "author": "Рей Бредбері",
+    "price": 160.00,
+    "genre": "Аутопія",
     "image": "/img/30.jpg",
-    "description": "A dystopian novel that presents a future American society where books are outlawed."
+    "description": "Дистопічний роман, що зображає майбутнє американського суспільства, де книги заборонені."
   },
   {
     "id": 10,
-    "title": "The Lord of the Rings",
-    "author": "J.R.R. Tolkien",
-    "price": 19.99,
-    "genre": "Fantasy",
+    "title": "Володар перснів",
+    "author": "Дж. Р. Р. Толкін",
+    "price": 300.00,
+    "genre": "Фантастика",
     "image": "/img/31.jpg",
-    "description": "An epic fantasy novel that follows the quest to destroy the One Ring."
+    "description": "Епічний фантастичний роман, який слідкує за пошуком, щоб знищити Одне Персня."
   },
   {
     "id": 11,
-    "title": "The Ballad of Songbirds and Snakes",
-    "author": "Suzanne Collins",
-    "price": 17.99,
-    "genre": "Dystopian",
-    "image": "/img/32.jpg", 
-    "description": "In this prequel to The Hunger Games trilogy, Coriolanus Snow struggles to avoid poverty while mentoring a tribute in the Hunger Games."
+    "title": "Баллада пташиних співаків і змій",
+    "author": "Сюзанна Коллінз",
+    "price": 200.00,
+    "genre": "Аутопія",
+    "image": "/img/32.jpg",
+    "description": "У цьому приквелі до трилогії Голодних ігор Коріолан Сноу намагається уникнути бідності, менторуючи учасника Голодних ігор."
   },
   {
     "id": 12,
-    "title": "The Midnight Library",
-    "author": "Matt Haig",
-    "price": 15.99,
-    "genre": "Fiction",
-    "image": "/img/33.jpg", 
-    "description": "A novel about the choices that go into a life well lived and the infinite possibilities of the universe."
+    "title": "Полунічна бібліотека",
+    "author": "Мэтт Хейг",
+    "price": 180.00,
+    "genre": "Художня література",
+    "image": "/img/33.jpg",
+    "description": "Роман про вибір, що веде до доброго життя, та безмежні можливості всесвіту."
   },
   {
     "id": 13,
-    "title": "The Paris Apartment",
-    "author": "Lucy Foley",
-    "price": 14.99,
-    "genre": "Mystery",
+    "title": "Паризька квартира",
+    "author": "Люсі Фолі",
+    "price": 210.00,
+    "genre": "Детектив",
     "image": "/img/34.jpg",
-    "description": "A gripping mystery set in a Paris apartment building, where secrets abound and no one is who they seem."
+    "description": "Напружена загадка, що відбувається в паризькому житловому будинку, де таємниці присутні і ніхто не є тим, ким здається."
   },
-
   {
     "id": 14,
-    "title": "The Apricot Boy: A Novella",
-    "author": "Ali Hazelwood",
-    "price": 15.00,
-    "genre": "Romance",
+    "title": "Хлопчик з абрикосом: Нова повість",
+    "author": "Алі Хейзелвуд",
+    "price": 160.00,
+    "genre": "Роман",
     "image": "/img/35.jpg",
-    "description": "A quirky romantic comedy about a graduate student who pretends to be in a relationship with a professor, leading to unexpected emotions and realizations."
+    "description": "Дивна романтична комедія про аспірантку, яка вдає, що має стосунки з професором, що призводить до несподіваних почуттів і усвідомлень."
   }
 ]

@@ -5,35 +5,44 @@ import {
   Container,
   Form,
   FormControl,
-  Button,
+  Dropdown,
 } from "react-bootstrap";
 import logo from "./01.png";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { FaShoppingCart, FaSearch } from "react-icons/fa"; // Імпорт іконок
+import { FaShoppingCart,  } from "react-icons/fa";
 import './Header.css';
 
 import Home from "../Pages/Home";
 import Catalog from "../Pages/Catalog";
 import Events from "../Pages/Events";
 import Cart from "../Pages/Cart";
+import booksData from '../book/books.json';
 
 export default class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchQuery: "", // стан для пошукового запиту
+      searchQuery: "",
+      genres: [],
+      dropdownOpen: false,
     };
   }
 
-  // Обробник події для зміни пошукового запиту
+  componentDidMount() {
+    this.extractGenres();
+  }
+
+  extractGenres() {
+    const uniqueGenres = Array.from(new Set(booksData.map(book => book.genre)));
+    this.setState({ genres: uniqueGenres });
+  }
+
   handleSearchInput = (event) => {
     this.setState({ searchQuery: event.target.value });
   };
 
-  // Обробник події для надсилання форми
-  handleSearchSubmit = (event) => {
-    event.preventDefault();
-    // Додаткова логіка не потрібна
+  toggleDropdown = (isOpen) => {
+    this.setState({ dropdownOpen: isOpen });
   };
 
   render() {
@@ -64,37 +73,64 @@ export default class Header extends Component {
                   <Nav.Link as={Link} to="/">
                     Home
                   </Nav.Link>
-
                   <Nav.Link as={Link} to="/events">
-                  Events
+                    Events
                   </Nav.Link>
-                  <Nav.Link as={Link} to="/catalog">
-                    Catalog
-                  </Nav.Link>
+                  {/* Dropdown for Catalog with genres */}
+                  <Dropdown
+                    onMouseEnter={() => this.toggleDropdown(true)}
+                    onMouseLeave={() => this.toggleDropdown(false)}
+                    show={this.state.dropdownOpen}
+                    className="nav-item"
+                  >
+                    <Nav.Link
+                      as={Link}
+                      to="#"
+                      className="nav-link"
+                      onClick={(e) => e.preventDefault()} // Prevent navigation
+                    >
+                      Catalog
+                    </Nav.Link>
+                    <Dropdown.Menu>
+                      <Dropdown.Item 
+                        as={Link} 
+                        to="/catalog" 
+                        onClick={() => this.toggleDropdown(false)} // Close menu before navigation
+                      >
+                        All Books
+                      </Dropdown.Item>
+                      {this.state.genres.map((genre) => (
+                        <Dropdown.Item 
+                          key={genre} 
+                          as={Link} 
+                          to={`/catalog?genre=${genre}`} 
+                          onClick={() => this.toggleDropdown(false)} // Close menu before navigation
+                        >
+                          {genre}
+                        </Dropdown.Item>
+                      ))}
+                    </Dropdown.Menu>
+                  </Dropdown>
                   <Nav.Link as={Link} to="/cart">
                     <FaShoppingCart className="me-1" />
                   </Nav.Link>
                 </Nav>
-                {/* Форма пошуку з обробкою події onSubmit */}
-                <Form className="d-flex ms-2" onSubmit={this.handleSearchSubmit}>
+                <Form className="d-flex ms-2">
                   <FormControl
                     type="text"
                     placeholder="Search for books..."
                     className="me-2"
                     aria-label="Search"
-                    value={this.state.searchQuery} // значення пошукового запиту
-                    onChange={this.handleSearchInput} // обробка введення
+                    value={this.state.searchQuery}
+                    onChange={this.handleSearchInput}
                   />
-                  <Button variant="outline-info" type="submit">
-                    <FaSearch className="me-1" /> Search
-                  </Button>
+                  {/* Removed the search button */}
                 </Form>
               </Navbar.Collapse>
             </Container>
           </Navbar>
           <Routes>
             <Route path="/" element={<Home />} />
-            {/* Передаємо пошуковий запит через пропси в компонент Catalog */}
             <Route
               path="/catalog"
               element={<Catalog searchQuery={this.state.searchQuery} />}
