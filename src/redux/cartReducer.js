@@ -12,7 +12,7 @@ const initialState = {
 // Reducer for the cart
 const cartReducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_TO_CART:
+    case ADD_TO_CART: {
       const item = action.payload;
       const existingItem = state.cartItems.find((x) => x.id === item.id);
 
@@ -27,8 +27,9 @@ const cartReducer = (state = initialState, action) => {
         ...state,
         cartItems: updatedCartItems,
       };
+    }
 
-    case REMOVE_FROM_CART:
+    case REMOVE_FROM_CART: {
       const newCartItems = state.cartItems.filter(
         (x) => x.id !== action.payload,
       );
@@ -37,8 +38,9 @@ const cartReducer = (state = initialState, action) => {
         ...state,
         cartItems: newCartItems,
       };
+    }
 
-    case UPDATE_QUANTITY_IN_CART: // Используйте правильное имя действия
+    case UPDATE_QUANTITY_IN_CART: {
       const { id, quantity } = action.payload;
       const updatedQuantityCartItems = state.cartItems.map((item) =>
         item.id === id ? { ...item, quantity } : item,
@@ -51,6 +53,7 @@ const cartReducer = (state = initialState, action) => {
         ...state,
         cartItems: updatedQuantityCartItems,
       };
+    }
 
     default:
       return state;

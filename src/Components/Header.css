@@ -1,120 +1,124 @@
-/* Header Styles */
+/* Основний стиль для шапки */
 .header {
   font-family: "Revalia", cursive;
-  background: linear-gradient(90deg, #246db6, #c1dff9); /* Градієнт для шапки */
-  padding: 5px 0; /* Збільшені відступи для кращого вигляду */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тінь для шапки */
+  background: linear-gradient(90deg, #246db6, #c1dff9);  
+  padding: 15px 0; /* Більший відступ для більш виразного вигляду */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Глибша тінь для шапки */
+  position: sticky; /* Закріплення шапки при прокручуванні */
+  top: 0;
+  z-index: 1000; /* Шапка завжди зверху */
 }
 
+/* Жирна лінія під шапкою */
+.header-line {
+  height: 4px; /* Висота лінії */
+  background-color: #000; /* Колір лінії */
+  margin: 0; /* Відступи по замовчуванню */
+}
+
+/* Вирівнювання елементів в одну лінію */
+.header .navbar {
+  display: flex;
+  justify-content: space-between; /* Розподіляє елементи по всій ширині */
+  align-items: center; /* Вирівнювання елементів вертикально по центру */
+  padding: 0 20px; /* Відступи з боків */
+}
+
+/* Логотип */
 .header img {
-  margin-right: 10px;
+  margin-right: 20px;
+  transition: transform 0.3s ease-in-out; /* Анімація при наведенні */
 }
 
+.header img:hover {
+  transform: scale(1.1); /* Легке збільшення при наведенні */
+}
+
+/* Назва бренду */
 .header .navbar-brand {
-  font-size: 26px; /* Трохи більший шрифт для назви бренду */
+  font-size: 26px; /* Оптимальний розмір шрифту для бренду */
   font-weight: bold;
-  color: #1d2020; /* колір для бренду */
+  color: #000; /* Чорний колір для бренду */
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Легка тінь для тексту */
+  transition: color 0.3s ease-in-out;
+}
+
+/* Навігаційні посилання */
+.header .navbar-nav {
+  display: flex; /* Вирівнює посилання в один ряд */
+  gap: 20px; /* Проміжок між посиланнями */
 }
 
 .header .navbar-nav .nav-link {
-  color: #3b2d2d;
-  font-size: 18px; /* Збільшений шрифт для зручності */
-  transition: color 0.3s ease-in-out; /* Плавна зміна кольору */
+  color: #000; /* Чорний колір для посилань */
+  font-size: 18px;
+  padding: 10px 20px;
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 
 .header .navbar-nav .nav-link:hover {
-  color: #61dafb;
-  text-shadow: 0px 0px 10px rgba(14, 25, 179, 0.7); /* Ефект підсвічування при наведенні */
+  color: #0b0049; /* Підсвічування при наведенні */
+  text-shadow: 0px 0px 8px rgba(4, 0, 255, 0.7); /* Ефект підсвічування */
 }
 
+/* Пошукове поле */
 .header .form-control {
-  width: 300px; /* Задаємо конкретну ширину */
-  border-radius: 30px;
-  padding: 8px 20px;
-  transition: none; /* Remove transition effect */
+  width: 300px;
+  border-radius: 20px;
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border: 1px solid transparent;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .header .form-control:focus {
-  border-color: #192d45; /* Зміна кольору бордюру при фокусі */
-  box-shadow: none; /* Remove shadow on focus */
+  border-color: #00ddfa;
+  background-color: #ffffff;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6); /* Яскраве підсвічування при фокусі */
 }
 
-
-
-.header .btn-outline-info {
-  border-radius: 10px;
-  padding: 8px 20px;
-  background-color: transparent;
-  border-color: #192d45;
-  color: #1d2020;
-  transition: all 0.3s ease-in-out;
+/* Кошик */
+.header .fa-shopping-cart {
+  color: #000; /* Чорний колір для іконки кошика */
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-.header .btn-outline-info:hover {
-  background-color: #1d2020;
-  color: #ffffff;
+.header .fa-shopping-cart:hover {
+  color: #7700ff;
+  transform: scale(1.2); /* Легке збільшення іконки при наведенні */
 }
 
+/* Кнопка меню для мобільних пристроїв */
 .header .navbar-toggler {
-  background-color: #61dafb; /* Виділення кнопки-меню на мобільних */
+  background-color: #10073b;
+  border: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.header .navbar-toggler:hover {
+  background-color: #4a90e2;
 }
 
 .header .navbar-toggler-icon {
-  color: #ffffff;
+  filter: invert(1); /* Щоб зробити іконку білою */
 }
 
+/* Адаптивність для мобільних пристроїв */
 @media (max-width: 576px) {
   .header .navbar {
     flex-direction: column;
-    align-items: center; /* Вирівнювання елементів по центру */
+    align-items: center;
+  }
+
+  .header .navbar-brand {
+    font-size: 24px; /* Оптимальний розмір для мобільних пристроїв */
+  }
+
+  .header .navbar-nav .nav-link {
+    font-size: 16px;
+  }
+
+  .header .form-control {
+    width: 100%;
   }
 }
-
-/* Dropdown Styles */
-.dropdown {
-  position: relative; /* Position relative for the dropdown */
-  display: inline-block; /* Inline-block to align with other nav items */
-}
-
-/* Dropdown Toggle */
-.dropdown-toggle {
-  cursor: pointer; /* Indicate clickable item */
-  transition: color 0.3s ease; /* Transition for hover effect */
-}
-
-.dropdown-toggle:hover {
-  color: #61dafb; /* Change color on hover */
-}
-
-/* Dropdown Menu */
-.dropdown-menu {
-  display: none; /* Hide dropdown by default */
-  position: absolute; /* Ensure the dropdown is positioned correctly */
-  z-index: 1000; /* Ensure it appears above other elements */
-  opacity: 0; /* Start with opacity 0 for animation */
-  transition: opacity 0.3s ease, transform 0.3s ease; /* Transition for opacity and transform */
-  transform: translateY(-10px); /* Move dropdown slightly up for effect */
-  background-color: #ffffff; /* Set background color for dropdown */
-  border-radius: 5px; /* Rounded corners for dropdown */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for dropdown */
-}
-
-/* Show Dropdown */
-.dropdown.show .dropdown-menu {
-  display: block; /* Show dropdown when it is in show state */
-  opacity: 1; /* Fade in */
-  transform: translateY(0); /* Move to original position */
-}
-
-.dropdown-item {
-  color: #3b2d2d; /* Колір тексту */
-  padding: 10px 15px; /* Відступи */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Плавний перехід */
-  cursor: pointer; /* Показує, що елемент клікабельний */
-}
-
-.dropdown-item:hover {
-  background-color: #61dafb; /* Підсвічування фону */
-  color: #ffffff; /* Колір тексту при наведенні */
-}
-

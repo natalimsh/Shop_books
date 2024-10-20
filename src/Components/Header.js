@@ -9,7 +9,7 @@ import {
 } from "react-bootstrap";
 import logo from "./01.png";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { FaShoppingCart,  } from "react-icons/fa";
+import { FaShoppingCart } from "react-icons/fa";
 import './Header.css';
 
 import Home from "../Pages/Home";
@@ -45,6 +45,10 @@ export default class Header extends Component {
     this.setState({ dropdownOpen: isOpen });
   };
 
+  handleClickOutside = () => {
+    this.toggleDropdown(false);
+  };
+
   render() {
     return (
       <Router>
@@ -76,41 +80,32 @@ export default class Header extends Component {
                   <Nav.Link as={Link} to="/events">
                     Events
                   </Nav.Link>
-                  {/* Dropdown for Catalog with genres */}
+
                   <Dropdown
                     onMouseEnter={() => this.toggleDropdown(true)}
                     onMouseLeave={() => this.toggleDropdown(false)}
                     show={this.state.dropdownOpen}
                     className="nav-item"
                   >
-                    <Nav.Link
-                      as={Link}
-                      to="#"
+                    <Dropdown.Toggle
+                      as={Nav.Link}
                       className="nav-link"
-                      onClick={(e) => e.preventDefault()} // Prevent navigation
+                      onClick={(e) => e.preventDefault()}
                     >
                       Catalog
-                    </Nav.Link>
+                    </Dropdown.Toggle>
                     <Dropdown.Menu>
-                      <Dropdown.Item 
-                        as={Link} 
-                        to="/catalog" 
-                        onClick={() => this.toggleDropdown(false)} // Close menu before navigation
-                      >
+                      <Dropdown.Item as={Link} to="/catalog" onClick={() => this.toggleDropdown(false)}>
                         All Books
                       </Dropdown.Item>
                       {this.state.genres.map((genre) => (
-                        <Dropdown.Item 
-                          key={genre} 
-                          as={Link} 
-                          to={`/catalog?genre=${genre}`} 
-                          onClick={() => this.toggleDropdown(false)} // Close menu before navigation
-                        >
+                        <Dropdown.Item key={genre} as={Link} to={`/catalog?genre=${genre}`} onClick={() => this.toggleDropdown(false)}>
                           {genre}
                         </Dropdown.Item>
                       ))}
                     </Dropdown.Menu>
                   </Dropdown>
+
                   <Nav.Link as={Link} to="/cart">
                     <FaShoppingCart className="me-1" />
                   </Nav.Link>

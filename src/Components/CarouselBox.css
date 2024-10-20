@@ -7,15 +7,14 @@
 .quote-container {
   padding: 20px; /* Відступи для зручності */
   padding-inline: 100px; /* Відступи по кожній стороні */
-  background-color: rgba(
-    99,
-    107,
-    116,
-    0.8
-  ); /* Напівпрозорий фон для контрасту */
+  background-color: rgba(99, 107, 116, 0.8); /* Напівпрозорий фон для контрасту */
   text-align: center; /* Вирівнювання тексту по центру */
-  color: #ffffff; /*  колір тексту */
+  color: #ffffff; /* Колір тексту */
+  border-top: 4px solid #ffffff; /* Біла лінія зверху */
+  border-bottom: 4px solid #ffffff; /* Біла лінія знизу */
 }
+
+
 
 .carousel-caption h3 {
   font-family: "Revalia", cursive;

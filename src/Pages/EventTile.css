@@ -1,99 +1,119 @@
-
-
+/* Плитка події */
 .event-tile {
   background-color: white;
   border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Increased shadow for more prominence */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   display: flex;
   flex-direction: row;
-  margin: 20px; /* Increased margin for better spacing between tiles */
-  width: 90%; 
-   
-margin-bottom: 60px; /* Make sure there's enough space at the bottom for the button */
-
-  transition: transform 0.3s ease-in-out, background-color 0.3s ease; /* Add transition for background color */
+  margin: 15px;
+  width: 90%; /* Зменшена ширина плиток */
+  margin-bottom: 50px;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease;
 }
 
+/* При наведенні на плитку */
 .event-tile:hover {
   transform: scale(1.02);
-  background-color: #e0f7fa; /* Light blue background on hover */
-  box-shadow: 0 12px 30px rgba(0, 89, 255, 0.5); /* Darker shadow on hover */
+  background-color: #e0f7fa;
+  box-shadow: 0 12px 30px rgba(0, 89, 255, 0.5);
 }
 
+/* Зображення події */
 .event-image {
-  width: 15%; /* Adjusted width for better balance */
+  width: 20%; /* Збільшено ширину зображення */
   object-fit: cover;
 }
 
+/* Деталі події */
 .event-details {
-  width: 70%; /* Adjusted width for better balance */
-  padding: 25px;
+  width: 90%; /* Адаптовано ширину під нове зображення */
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: "Revalia", cursive; /* Apply custom font to event details */
 }
 
+/* Заголовок події */
 .event-title {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   font-weight: bold;
   color: #333;
 }
 
-.event-date-time, .event-location {
-  font-size: 2rem;
+/* Дата, час, локація */
+.event-date-time,
+.event-location {
+  font-size: 1.8rem;
   color: #666;
 }
 
+/* Опис події */
 .event-description {
-  font-size: 25px;
-  margin-top: 10px;
+  font-size: 22px;
+  margin-top: 8px;
   color: #555;
 }
 
-.event-speaker {
-  font-weight: bold;
-  margin-top: 10px;
-  color: #007bff;
-}
-
-/* Apply the custom font globally to the page */
-body {
-  font-family: "Revalia", cursive; /* Set the font for the entire body */
-}
+/* Основний стиль для кнопки скролу */
 .scroll-to-top-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px; /* Adjust the size as needed */
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  z-index: 1000; /* Ensure it appears above other elements */
-}
-/* CSS для кнопки скролу */
-.scroll-to-top-button {
-  position: fixed; /* Зафіксувати кнопку на екрані */
-  bottom: 20px; /* Відступ знизу */
-  right: 20px; /* Відступ справа */
+  position: fixed;
+  bottom: 30px;
+  right: 70px; /* Відступ справа залишено без змін */
   padding: 10px 15px;
-  border-radius: 20%; /* Кругла форма */
+  border-radius: 20%;
   background-color: #007bff;
   color: white;
   font-size: 24px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  z-index: 1000; /* Відображати поверх інших елементів */
+  z-index: 1000;
   transition: transform 0.3s ease-in-out;
-  display: none; /* Сховати кнопку спочатку */
+  display: none;
 }
 
 .scroll-to-top-button.show {
-  display: flex; /* Показати кнопку, якщо вона активна */
+  display: flex;
 }
 
 .scroll-to-top-button:hover {
   background-color: #0056b3;
-  transform: scale(1.1); /* Анімація при наведенні */
+  transform: scale(1.1);
+}
+
+/* Адаптація під ноутбуки */
+@media (max-width: 1366px) {
+  .event-tile {
+    width: 90%; /* Трохи збільшена ширина плиток */
+  }
+
+  .event-image {
+    width: 25%; /* Ширина зображення адаптована під екрани ноутбуків */
+  }
+}
+
+/* Адаптація під телефони */
+@media (max-width: 768px) {
+  .event-tile {
+    flex-direction: column; /* Вертикальна організація плитки */
+    width: 95%; /* Ширина для мобільних */
+    margin: 10px;
+  }
+
+  .event-image {
+    width: 100%; /* Зображення займає всю ширину плитки */
+    height: auto; /* Автоматична висота */
+  }
+
+  .event-details {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .scroll-to-top-button {
+    bottom: 10px;
+    right: 10px; /* Кнопка ближче до краю */
+    font-size: 18px;
+    padding: 8px 12px;
+  }
 }

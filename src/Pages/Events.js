@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import EventTile from './EventTile';
 import booksData from '../book/events.json'; // Ensure the path is correct
-import { FaCaretSquareUp } from 'react-icons/fa'; // Імпорт іконки
 
 const EventsPage = () => {
   const [animatedEvents, setAnimatedEvents] = useState([]);
@@ -9,11 +8,12 @@ const EventsPage = () => {
 
   // Shuffle function
   const shuffleArray = (array) => {
-    for (let i = array.length - 1; i > 0; i--) {
+    const shuffledArray = array.slice(); // Clone the array
+    for (let i = shuffledArray.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
+      [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
     }
-    return array;
+    return shuffledArray;
   };
 
   // Scroll to top function
@@ -31,14 +31,13 @@ const EventsPage = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   // Set shuffled events
   useEffect(() => {
     const timer = setTimeout(() => {
-      setAnimatedEvents(shuffleArray([...booksData])); // Shuffle the events
+      setAnimatedEvents(shuffleArray(booksData)); // Shuffle the events
     }, 500);
 
     return () => clearTimeout(timer);
@@ -62,7 +61,7 @@ const EventsPage = () => {
         aria-label="Scroll up"
         tabIndex="0" // Make it keyboard accessible
       >
-        <FaCaretSquareUp size={24} /> {/* Використання іконки */}
+        ↑
       </button>
     </div>
   );
