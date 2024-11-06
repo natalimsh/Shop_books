@@ -1,89 +1,132 @@
-/* Modal overlay */
+/* Модальне вікно: накладка */
 .modal.show {
-  display: block; /* Ensure modal is displayed */
-  position: fixed; /* Fixed position for modal */
+  display: block; /* Переконатися, що модальне вікно відображається */
+  position: fixed; /* Фіксована позиція для модального вікна */
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  z-index: 1000; /* Above other content */
+  background-color: rgba(0, 0, 0, 0.6); /* Темний напівпрозорий фон */
+  z-index: 1050; /* Трохи вище для кращого накладення */
+  backdrop-filter: blur(5px); /* Плавний ефект розмиття позаду модального вікна */
+  animation: fadeIn 0.5s ease-out; /* Анімація появи накладки */
+}
+/* Анімація появи модального вікна */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-/* Modal dialog */
+/* Модальне вікно: діалог */
 .modal-dialog {
   position: relative;
-  margin: 1.75rem auto; /* Center the modal */
+  margin: 2rem auto; /* Центрування модального вікна */
+  max-width: 90%; /* Дозволити модальному вікну займати більше місця на мобільних */
+  width: 500px; /* Встановити максимальну ширину */
 }
 
-/* Modal content */
+/* Модальне вікно: вміст */
 .modal-content {
-  background-color: #99c8d4; /* Light background */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  background-color: #ffffff; /* Чистий білий фон */
+  border-radius: 15px; /* М'які, закруглені кути */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Сучасна тінь для глибини */
+  overflow: hidden; /* Забезпечити відсутність переповнення вмісту */
 }
 
-/* Modal header */
+/* Модальне вікно: заголовок */
 .modal-header {
   display: flex;
-  justify-content: space-between; /* Space between title and close button */
-  align-items: center; /* Center vertically */
-  padding: 20px; /* Padding for header */
-}
-
-/* Modal body */
-.modal-body {
-  display: flex; /* Use Flexbox to align image and text horizontally */
-  align-items: center; /* Vertically center-align the image and text */
-  justify-content: space-between; /* Add space between image and text */
+  justify-content: space-between; /* Простір між заголовком та кнопкою закриття */
+  align-items: center; /* Вертикальне вирівнювання */
   padding: 20px;
+  background-color: #f4f6f9; /* Світлий нейтральний фон */
+  border-bottom: 1px solid #ddd; /* Тонка межа для розділення */
+  color: #333; /* Темний текст для зручності читання */
+  font-weight: 600; /* Жирний шрифт для заголовку */
 }
-/* Modal image */
+
+/* Модальне вікно: основний вміст */
+.modal-body {
+  display: flex;
+  align-items: center; /* Вертикальне вирівнювання */
+  justify-content: space-between; /* Простір між зображенням та текстом */
+  padding: 25px;
+  color: #444; /* М'який колір тексту */
+}
+
+/* Модальне вікно: зображення */
 .modal-image {
-  position: relative;
-  margin-left: 1px;
-
-  max-width: 40%; /* Responsive image */
-
-  border-radius: 10px; /* Rounded corners */
+  max-width: 40%;
+  height: auto;
+  border-radius: 8px; /* Закруглені кути зображення */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Легка тінь для зображення */
+  transition: transform 0.3s ease-in-out; /* Ефект при наведенні на зображення */
 }
 
-/* Modal description */
+.modal-image:hover {
+  transform: scale(1.05); /* Легке збільшення зображення при наведенні */
+}
+
+/* Модальне вікно: опис */
 .modal-description {
-  font-size: 18px; /* Increase font size for better readability */
-  margin-top: 1px; /* Space above the description */
-  color: rgb(10, 7, 29); /* Black text */
-  margin-left: 10%;
-
-
+  font-size: 16px; /* Трохи менший розмір для зручності читання */
+  color: #555; /* Темніший текст для контрасту */
+  margin-left: 20px; /* Простір між зображенням та текстом */
+  line-height: 1.5; /* Кращий міжрядковий інтервал */
+  max-width: 55%;
+  word-wrap: break-word; /* Забезпечити, щоб текст не виходив за межі */
 }
 
-/* Modal footer */
+/* Модальне вікно: футер */
 .modal-footer {
-  display: flex; /* Flex layout for buttons */
-  justify-content: flex-end; /* Align buttons to the right */
-  padding: 10px; /* Padding for footer */
+  display: flex;
+  justify-content: flex-end; /* Вирівнювання кнопок праворуч */
+  padding: 15px 25px;
+  background-color: #f4f6f9; /* Світлий фон для футера */
+  border-top: 1px solid #ddd;
 }
 
-/* Button styles */
+/* Стилі кнопок */
 .btn {
-  padding: 5px 25px; /* Button padding */
-  border-radius: 4px; /* Rounded corners for buttons */
-  
-  cursor: pointer; /* Pointer cursor on hover */
+  padding: 8px 24px;
+  border-radius: 20px; /* Кругла кнопка для сучасного вигляду */
+  cursor: pointer;
+  font-weight: 500; /* Трохи жирніший шрифт */
+  text-transform: uppercase; /* Великі літери для акценту */
+  transition: background-color 0.3s ease; /* Плавний перехід кольору */
 }
 
 .btn-secondary {
-  background-color: #6c757d; /* Bootstrap secondary button color */
-  color: rgb(0, 0, 0); /* White text */
+  background-color: #b0bec5; /* Мутно-сірий колір для вторинної кнопки */
+  color: #fff; /* Білий текст */
+  border: none;
 }
 
 .btn-primary {
-  background-color: #007bff9d; /* Bootstrap primary button color */
-  color: rgb(0, 0, 0); /* White text */
+  background-color: #3498db; /* Яскраво-синій для основної кнопки */
+  color: #fff;
+  border: none;
 }
 
-/* Hover effect for buttons */
 .btn:hover {
-  opacity: 0.8; /* Slightly fade on hover */
+  opacity: 0.85; /* Легке затемнення при наведенні */
+  transform: translateY(-2px); /* Легкий підйом кнопки при наведенні */
+}
+
+/* Кнопка закриття */
+.close {
+  font-size: 1.5rem;
+  color: #555;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.close:hover {
+  color: #4503df; /*  ефект при наведенні на кнопку закриття */
 }

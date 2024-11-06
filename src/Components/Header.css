@@ -1,124 +1,132 @@
 /* Основний стиль для шапки */
 .header {
   font-family: "Revalia", cursive;
-  background: linear-gradient(90deg, #246db6, #c1dff9);  
-  padding: 15px 0; /* Більший відступ для більш виразного вигляду */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Глибша тінь для шапки */
-  position: sticky; /* Закріплення шапки при прокручуванні */
+  background: linear-gradient(90deg, #246db6, #c1dff9);
+  padding: 10px 0; /* Зменшення вертикальних відступів для мобільних */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: sticky;
   top: 0;
-  z-index: 1000; /* Шапка завжди зверху */
+  z-index: 1000;
 }
 
 /* Жирна лінія під шапкою */
 .header-line {
-  height: 4px; /* Висота лінії */
-  background-color: #000; /* Колір лінії */
-  margin: 0; /* Відступи по замовчуванню */
+  height: 3px; /* Зменшення висоти для більш витонченого вигляду */
+  background-color: #000;
+  margin: 0;
 }
 
 /* Вирівнювання елементів в одну лінію */
 .header .navbar {
   display: flex;
-  justify-content: space-between; /* Розподіляє елементи по всій ширині */
-  align-items: center; /* Вирівнювання елементів вертикально по центру */
-  padding: 0 20px; /* Відступи з боків */
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px; /* Зменшення відступів з боків для економії місця */
+  flex-wrap: wrap; /* Для зручного переносу елементів на мобільних */
 }
 
 /* Логотип */
 .header img {
-  margin-right: 20px;
-  transition: transform 0.3s ease-in-out; /* Анімація при наведенні */
+  margin-right: 15px;
+  transition: transform 0.3s ease-in-out;
 }
 
 .header img:hover {
-  transform: scale(1.1); /* Легке збільшення при наведенні */
+  transform: scale(1.05);
 }
 
 /* Назва бренду */
 .header .navbar-brand {
-  font-size: 26px; /* Оптимальний розмір шрифту для бренду */
+  font-size: 22px; /* Зменшений розмір для компактного вигляду */
   font-weight: bold;
-  color: #000; /* Чорний колір для бренду */
-  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Легка тінь для тексту */
+  color: #000;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   transition: color 0.3s ease-in-out;
 }
 
 /* Навігаційні посилання */
 .header .navbar-nav {
-  display: flex; /* Вирівнює посилання в один ряд */
-  gap: 20px; /* Проміжок між посиланнями */
+  display: flex;
+  flex-direction: column; /* Розміщення елементів вертикально */
+  align-items: center;
+  gap: 15px; /* Проміжок між посиланнями */
 }
 
 .header .navbar-nav .nav-link {
-  color: #000; /* Чорний колір для посилань */
+  color: #000;
   font-size: 18px;
-  padding: 10px 20px;
+  padding: 8px 15px; /* Менші відступи */
   transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 
 .header .navbar-nav .nav-link:hover {
-  color: #0b0049; /* Підсвічування при наведенні */
-  text-shadow: 0px 0px 8px rgba(4, 0, 255, 0.7); /* Ефект підсвічування */
+  color: #0b0049;
+  text-shadow: 0px 0px 6px rgba(4, 0, 255, 0.5); /* Зменшене підсвічування */
 }
 
 /* Пошукове поле */
 .header .form-control {
-  width: 300px;
-  border-radius: 20px;
-  padding: 10px 20px;
-  background-color: #f0f0f0;
+  width: 90%; /* Ширина на всю доступну ширину екрану */
+  border-radius: 15px;
+  padding: 8px 15px;
+  background-color: #f9f9f9;
   border: 1px solid transparent;
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .header .form-control:focus {
-  border-color: #00ddfa;
-  background-color: #ffffff;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6); /* Яскраве підсвічування при фокусі */
+  border-color: #00aaff;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Кошик */
 .header .fa-shopping-cart {
-  color: #000; /* Чорний колір для іконки кошика */
+  color: #000;
   transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .header .fa-shopping-cart:hover {
   color: #7700ff;
-  transform: scale(1.2); /* Легке збільшення іконки при наведенні */
+  transform: scale(1.15);
 }
 
 /* Кнопка меню для мобільних пристроїв */
 .header .navbar-toggler {
-  background-color: #10073b;
+  background-color: #333;
   border: none;
   transition: background-color 0.3s ease-in-out;
 }
 
 .header .navbar-toggler:hover {
-  background-color: #4a90e2;
+  background-color: #555;
 }
 
 .header .navbar-toggler-icon {
-  filter: invert(1); /* Щоб зробити іконку білою */
+  filter: invert(1);
 }
 
-/* Адаптивність для мобільних пристроїв */
+/* Медіа-запити для адаптації на телефонах */
 @media (max-width: 576px) {
+  /* Перенос елементів в стовпець для компактного вигляду */
   .header .navbar {
     flex-direction: column;
     align-items: center;
   }
 
   .header .navbar-brand {
-    font-size: 24px; /* Оптимальний розмір для мобільних пристроїв */
+    font-size: 20px; /* Ще менший розмір для економії місця */
+  }
+
+  .header .navbar-nav {
+    gap: 10px; /* Менший проміжок між посиланнями */
   }
 
   .header .navbar-nav .nav-link {
-    font-size: 16px;
+    font-size: 16px; /* Зменшений шрифт для посилань */
   }
 
   .header .form-control {
-    width: 100%;
+    width: 100%; /* Поле пошуку на всю ширину */
   }
 }

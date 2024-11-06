@@ -9,7 +9,7 @@ const Footer = () => {
       <Row className="py-4">
         <Col md={4} className="text-center">
           <p className="text-muted">© 2024 КнигоТека, Inc</p>
-          <p className="slogan">"Відкрийте світ книг!"</p> {/* Додано слоган */}
+          <p className="slogan">Відкрийте світ книг!</p> {/* Додано слоган */}
         </Col>
         <Col md={4} className="text-center">
           <h5>Контакти</h5>

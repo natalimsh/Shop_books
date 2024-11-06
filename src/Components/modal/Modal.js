@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import './Modal.css';
 
 const Modal = ({ isOpen, onClose, image, title, description, onAddToCart }) => {
@@ -29,23 +30,27 @@ const Modal = ({ isOpen, onClose, image, title, description, onAddToCart }) => {
             </button>
           </div>
           <div className="modal-body">
-            <img src={image} alt={title} className="modal-image" style={{ width: "100%", borderRadius: "10px" }} />
+            <img src={image} alt={title} className="modal-image" />
             <p className="modal-description">{description}</p>
           </div>
           <div className="modal-footer">
             <button type="button" className="btn btn-primary" onClick={onAddToCart}>
-              <img 
-                src="https://img.icons8.com/?size=100&id=2uJSziV9TRlr&format=png&color=000000" 
-                alt="Купити" 
-                style={{ width: '30px', marginRight: '20px', position: 'self-center'  }} 
-              />
-           
+              Придбати
             </button>
           </div>
         </div>
       </div>
     </div>
   );
+};
+
+Modal.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+  image: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  onAddToCart: PropTypes.func.isRequired,
 };
 
 export default Modal;

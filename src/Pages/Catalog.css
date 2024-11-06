@@ -1,144 +1,191 @@
-/* Container for the catalog */
+/* General Styles */
 .catalog-container {
   font-family: "Revalia", cursive;
   padding: 10px;
-
+  background: linear-gradient(45deg, #e3eeee, #c7dbcf);
+  color: rgb(0, 0, 0);
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Flexbox layout for sidebar and grid */
+/* Flexbox Layout for Sidebar and Grid */
 .catalog-layout {
   display: flex;
+  gap: 20px;
 }
 
-/* Sidebar with genre list */
+/* Sidebar and Price Filter */
+.genre-list, .price-filter {
+  flex: 1;
+  max-width: 250px;
+  background-color: #f8f8f8;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 .genre-list {
-  flex: 1; /* Takes 1 part of available space */
-  max-width: 200px; /* Maximum width for sidebar */
-  margin-right: 20px; /* Space between sidebar and grid */
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Genre buttons */
-/* Genre buttons */
 .genre-button {
-  display: block;
   margin: 5px 0;
   padding: 10px;
-  border: none;
   background-color: #f0f0f0;
   cursor: pointer;
-  border-radius: 5px;
-  width: 100%;
+  border-radius: 10px;  /* Rounded corners for a 'tile' effect */
   text-align: center;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s ease-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow to give a 'tile' feel */
 }
 
-/* Hover effect for genre button */
 .genre-button:hover {
-  background-color: #e0e0e0; /* Колір при наведенні */
+  background-color: #e0e0e0;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
 }
 
-/* Active state for selected genre button */
 .genre-button.active {
-  background-color: #246db6; /* Колір вибраного жанру */
-  color: white; /* Білий текст для контрасту */
+  background-color: #246db6;
+  color: white;
 }
 
-/* Grid layout for catalog items */
+/* Catalog Grid */
 .catalog-grid {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(200px, 1fr)
-  ); /* Responsive grid columns */
-  gap: 10px; /* Gap between tiles */
-  flex: 3; /* Takes 3 parts of available space */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  flex: 3;
+  padding: 15px;
 }
 
-/* Individual catalog tile */
 .catalog-tile {
   position: relative;
-  border: 2px solid #ccc; /* Зменшено для більш стриманого вигляду */
-  padding: 15px; /* Збільшено для комфортнішого відступу */
+  border: 2px solid #ccc;
+  padding: 15px;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: #61dafb42; /* Світліший фон для покращення контрасту */
-  height: 100%;
-  border-radius: 10px; /* Залиште округлі кути */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Легке тіньове ефект для глибини */
-  transition: transform 0.3s, box-shadow 0.3s; /* Додано для анімації при наведенні */
+  background-color: #61dafb42;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease-in-out;
+  
+  /* Set fixed height for tile to avoid stretching */
+  height: 400px;  /* Adjust this value as needed */
+  overflow: hidden;
 }
 
-
-/* Shadow on tile hover */
 .catalog-tile:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
 }
 
-/* Image inside catalog tile */
 .book-image {
   max-width: 100%;
-  max-height: 70%;
+  max-height: 200px;  /* Limit image height */
   object-fit: contain;
   border: 5px solid #6a828b;
   border-radius: 10px;
-  margin: 0 auto; /* Center the image */
-  display: block;
-  height: auto;
-  flex-grow: 1; /* Allow image to take available space */
+  margin: 0 auto;
+  flex-grow: 1;
+  transition: transform 0.3s ease-out;
 }
 
-/* Button for buying */
+.book-image:hover {
+  transform: scale(1.05);
+}
+
 .buy-button {
-  margin-top: auto; /* This pushes the button to the bottom of the tile */
-  width: 90%; /* Width of the button */
-  align-self: center; /* Center the button horizontally */
-  padding: 10px; /* Padding for better clickability */
-  background-color: #246db6; /* Primary color, matching header */
-  color: white; /* White text color */
-  border: none; /* Remove border */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Pointer cursor on hover */
-  font-size: 16px; /* Font size */
-  font-weight: bold; /* Bold text */
-  text-align: center; /* Center text */
-  transition:
-    background-color 0.3s,
-    transform 0.2s,
-    box-shadow 0.3s; /* Smooth transitions */
+  margin-top: auto;
+  width: 90%;
+  padding: 10px;
+  background-color: #246db6;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+  /* Ensure the button doesn't stretch the tile too much */
+  height: 50px;
 }
 
-/* Hover effect for the button */
 .buy-button:hover {
-  background-color: #61dafb; /* Light color on hover to match theme */
-  transform: translateY(-3px); /* Slight upward movement on hover */
-  box-shadow: 0 4px 8px rgba(31, 146, 8, 0.2); /* Add shadow on hover */
+  background-color: #61dafb;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(31, 146, 8, 0.2);
 }
 
-/* Active state (when the button is clicked) */
 .buy-button:active {
-  background-color: #1d2020; /* Darker color when clicked */
-  transform: translateY(0); /* Return to original position when clicked */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Less shadow when clicked */
+  background-color: #1d2020;
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Styles for book title and author */
+/* Book Title, Author, and Price */
+.book-title, .book-author, .book-price {
+  transition: color 0.3s ease-in-out;
+}
+
 .book-title {
-  color: #555; 
-  margin-bottom: 2px; /* Reduced space between title and author */
-  font-size: 17px; /* Title font size */
-  font-weight: bold; /* Bold title */
+  color: #555;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.book-title:hover {
+  color: #246db6;
 }
 
 .book-author {
-  margin-bottom: 2px; 
-  font-size: 14px; /* Author font size */
-  color: #555; /* Light gray color for author */
+  font-size: 14px;
+  color: #555;
+}
+
+.book-author:hover {
+  color: #61dafb;
 }
 
 .book-price {
-  margin-top: 2px; /* Smaller space between author and price */
-  font-size: 18px; /* Price font size */
-  color: #333; /* Color for price */
+  font-size: 18px;
+  color: #333;
+}
+
+.book-price:hover {
+  color: #246db6;
+}
+
+/* Price Filter */
+.price-filter {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.price-filter label {
+  font-weight: bold;
+}
+
+.price-filter input {
+  padding: 5px 10px;
+  font-size: 14px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.price-filter input:focus {
+  border-color: #246db6;
+}
+
+.price-filter input[type="number"] {
+  width: 100%;
 }

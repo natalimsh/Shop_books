@@ -1,44 +1,58 @@
 /* Плитка події */
 .event-tile {
+  font-family: "Revalia", cursive;
   background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   display: flex;
   flex-direction: row;
-  margin: 15px;
-  width: 90%; /* Зменшена ширина плиток */
+  margin: 20px;
+  width: 90%; /*  ширина плиток */
   margin-bottom: 50px;
-  transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+  transition: transform 0.3s ease-in-out, background-color 0.4s ease, box-shadow 0.3s ease-in-out;
+  position: relative;
 }
 
 /* При наведенні на плитку */
 .event-tile:hover {
-  transform: scale(1.02);
+  transform: scale(1.05);
   background-color: #e0f7fa;
-  box-shadow: 0 12px 30px rgba(0, 89, 255, 0.5);
+  box-shadow: 0 12px 40px rgba(0, 89, 255, 0.3);
+  cursor: pointer;
 }
 
 /* Зображення події */
 .event-image {
-  width: 20%; /* Збільшено ширину зображення */
+  width: 10%; /*  ширину зображення */
   object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.event-tile:hover .event-image {
+  transform: scale(1.1);
 }
 
 /* Деталі події */
 .event-details {
-  width: 90%; /* Адаптовано ширину під нове зображення */
-  padding: 20px;
+  width: 75%; /*  під нове зображення */
+  padding: 25px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: transform 0.3s ease-in-out;
 }
 
 /* Заголовок події */
 .event-title {
-  font-size: 2.3rem;
-  font-weight: bold;
+  font-size: 2.5rem;
+  font-weight: 700;
   color: #333;
+  transition: color 0.3s ease;
+}
+
+.event-tile:hover .event-title {
+  color: #007bff;
 }
 
 /* Дата, час, локація */
@@ -46,29 +60,42 @@
 .event-location {
   font-size: 1.8rem;
   color: #666;
+  transition: color 0.3s ease;
+}
+
+.event-tile:hover .event-date-time,
+.event-tile:hover .event-location {
+  color: #007bff;
 }
 
 /* Опис події */
 .event-description {
-  font-size: 22px;
+  font-size: 1.2rem;
   margin-top: 8px;
   color: #555;
+  line-height: 1.6;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.event-tile:hover .event-description {
+  opacity: 1;
 }
 
 /* Основний стиль для кнопки скролу */
 .scroll-to-top-button {
   position: fixed;
   bottom: 30px;
-  right: 70px; /* Відступ справа залишено без змін */
-  padding: 10px 15px;
-  border-radius: 20%;
+  right: 30px;
+  padding: 12px 18px;
+  border-radius: 30%;
   background-color: #007bff;
   color: white;
-  font-size: 24px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 28px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   z-index: 1000;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease, background-color 0.3s ease;
   display: none;
 }
 
@@ -78,7 +105,7 @@
 
 .scroll-to-top-button:hover {
   background-color: #0056b3;
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 /* Адаптація під ноутбуки */
@@ -88,7 +115,11 @@
   }
 
   .event-image {
-    width: 25%; /* Ширина зображення адаптована під екрани ноутбуків */
+    width: 30%; /* Ширина зображення адаптована під екрани ноутбуків */
+  }
+
+  .event-details {
+    padding: 20px;
   }
 }
 
@@ -111,9 +142,9 @@
   }
 
   .scroll-to-top-button {
-    bottom: 10px;
-    right: 10px; /* Кнопка ближче до краю */
-    font-size: 18px;
-    padding: 8px 12px;
+    bottom: 15px;
+    right: 15px; /* Виправлено відступ */
+    font-size: 22px;
+    padding: 10px 15px;
   }
 }
